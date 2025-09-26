@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ela Consultoria | A Sua Jornada Empreendedora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fdfaf8;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .brand-text-strong {
+            color: #2d3748; /* cinza escuro */
+        }
+        .brand-text-soft {
+             color: #4a5568; /* cinza médio */
+        }
+        .brand-accent {
+            color: #8B5CF6; /* roxo */
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .jornada-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .current-month-highlight {
+            background-color: #8B5CF6; /* roxo */
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .current-month-highlight h3 {
+            color: white;
+        }
+        .floating-button {
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 brand-text-soft">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold brand-text-strong">Ela.</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#jornada" class="hover:text-brand-accent transition duration-300">A Jornada</a>
+                    <a href="#historias" class="hover:text-brand-accent transition duration-300">Histórias</a>
+                    <a href="#comunidade" class="hover:text-brand-accent transition duration-300">Comunidade</a>
+                    <a href="#evento" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-5 py-2 rounded-full font-semibold transition duration-300">Próximo Evento</a>
+                </nav>
+                <div class="md:hidden">
+                    <!-- Menu mobile pode ser adicionado aqui -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 
+            SEÇÃO HERO 
+            PARA ALTERAR A IMAGEM DE FUNDO, SUBSTITUA O LINK DENTRO DE style="background-image: url('...')".
+            Use uma imagem de alta qualidade para um melhor resultado.
+        -->
+        <section 
+            class="hero-bg pt-32 pb-20" 
+            style="background-image: url('https://www.rbsdirect.com.br/imagesrc/25430343.jpg?w=1200&h=630&a=c&version=1575255600');">
+            
+            <div class="container mx-auto px-6 text-center hero-content">
+                <h1 class="text-4xl md:text-6xl font-extrabold brand-text-strong leading-tight">
+                    Sua jornada empreendedora<br>começa com <span class="brand-accent">Ela.</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto">
+                    Transformamos ideias em negócios e negócios em legados. Acreditamos no poder da mulher empreendedora e estamos aqui para impulsionar cada passo do seu caminho.
+                </p>
+                <a href="#evento" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                    Participe do nosso próximo encontro
+                </a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EVENTO (O ELEVADOR) -->
+        <section id="evento" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Seu Próximo Passo na Jornada</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto">Conecte-se, aprenda e cresça ao lado de outras mulheres que, como você, estão a construir os seus sonhos.</p>
+                
+                <div class="mt-12 bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto shadow-custom">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-calendar-event brand-accent" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Data</h3>
+                            <p>30 de Outubro</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-clock brand-accent" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Horário</h3>
+                            <p>19h às 21h</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo-alt-fill brand-accent" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Formato</h3>
+                            <p>Online, via Zoom</p>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-10 py-4 rounded-full font-bold text-lg transition duration-300 w-full md:w-auto shadow-lg">
+                        QUERO GARANTIR A MINHA VAGA
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">Vagas limitadas para garantir a qualidade da interação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO JORNADA -->
+        <section id="jornada" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">A Jornada d'Ela</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto">Um plano de crescimento para cada mês do seu ano empreendedor.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- As 12 Fases da Jornada -->
+                    <div id="jornada-0" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Janeiro</h3>
+                        <p class="mt-3">Planeamento Anual e Definição de Metas.</p>
+                    </div>
+                    <div id="jornada-1" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Fevereiro</h3>
+                        <p class="mt-3">Estruturação Financeira e Preços.</p>
+                    </div>
+                    <div id="jornada-2" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Março</h3>
+                        <p class="mt-3">Marketing Digital e Primeiras Campanhas.</p>
+                    </div>
+                    <div id="jornada-3" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Abril</h3>
+                        <p class="mt-3">Otimização de Redes Sociais.</p>
+                    </div>
+                    <div id="jornada-4" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Maio</h3>
+                        <p class="mt-3">Técnicas de Vendas e Negociação.</p>
+                    </div>
+                    <div id="jornada-5" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Junho</h3>
+                        <p class="mt-3">Análise de Métricas e Resultados.</p>
+                    </div>
+                    <div id="jornada-6" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Julho</h3>
+                        <p class="mt-3">Revisão Semestral e Ajuste de Rota.</p>
+                    </div>
+                    <div id="jornada-7" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Agosto</h3>
+                        <p class="mt-3">Expansão de Produtos ou Serviços.</p>
+                    </div>
+                    <div id="jornada-8" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Setembro</h3>
+                        <p class="mt-3">Criação de Autoridade e Marca Pessoal.</p>
+                    </div>
+                    <div id="jornada-9" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Outubro</h3>
+                        <p class="mt-3">Preparação para Vendas de Fim de Ano.</p>
+                    </div>
+                    <div id="jornada-10" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Novembro</h3>
+                        <p class="mt-3">Fidelização de Clientes e Pós-venda.</p>
+                    </div>
+                    <div id="jornada-11" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
+                        <h3 class="text-xl font-bold brand-text-strong">Fase Dezembro</h3>
+                        <p class="mt-3">Balanço Anual e Celebração de Conquistas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HISTÓRIAS (DEPOIMENTOS) -->
+        <section id="historias" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Histórias d'Ela</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto">O sucesso delas é a nossa maior inspiração.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                        <p class="italic">"A consultoria foi um divisor de águas. Eu tinha uma paixão, mas não sabia como transformá-la em negócio. A 'Ela' deu-me as ferramentas e a confiança que eu precisava."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://placehold.co/50x50/e2e8f0/4a5568?text=M" alt="Retrato de Maria S." class="rounded-full">
+                            <div class="ml-4">
+                                <p class="font-bold brand-text-strong">Maria S.</p>
+                                <p class="text-sm">Fundadora da "Doce Afeto Brigaderia"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+                        <p class="italic">"Participar dos encontros mensais mudou a minha perspetiva. A energia da comunidade é incrível. Sinto que não estou mais sozinha nesta jornada."</p>
+                        <div class="flex items-center mt-6">
+                             <img src="https://placehold.co/50x50/e2e8f0/4a5568?text=J" alt="Retrato de Juliana P." class="rounded-full">
+                            <div class="ml-4">
+                                <p class="font-bold brand-text-strong">Juliana P.</p>
+                                <p class="text-sm">Designer e Artista Visual</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO COMUNIDADE (INSTAGRAM) -->
+        <section id="comunidade" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">A nossa Comunidade em Ação</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto">Siga a nossa jornada no Instagram para dicas diárias, inspiração e os bastidores da nossa comunidade.</p>
+                
+                <!-- 
+                  INSTRUÇÕES PARA ATUALIZAÇÃO MANUAL:
+                  Para manter esta secção atualizada, siga estes passos:
+                  1. Abra o Instagram no seu computador e vá para a publicação desejada.
+                  2. Clique com o botão direito do rato na imagem e selecione "Copiar endereço da imagem".
+                  3. Cole o novo endereço da imagem no atributo `src` da tag `<img>` correspondente abaixo.
+                  4. No atributo `href` da tag `<a>`, cole o link para a publicação do Instagram.
+                -->
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                    <!-- Post 1 (O mais recente) -->
+                    <a href="https://www.instagram.com/p/C85Q5g5OQXb/" target="_blank" class="block aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/449673898_1435213697135804_1322960683333336262_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=Wk4c6VzW6-AQ7kNvgFv5qDx&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzM5OTYwNDMyMTA0MTQzNzU1Nw%3D%3D.2-ccb7-5&oh=00_AYBq25JqU9lM-jW4fQ0UjB2x0w0M3q3z5QdK-g023Xm1oA&oe=66A7D9D3&_nc_sid=ee9879" alt="Post do Instagram 1" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <!-- Post 2 -->
+                    <a href="https://www.instagram.com/p/C80V2E7ua_M/" target="_blank" class="block aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://scontent-gru2-1.cdninstagram.com/v/t51.2885-15/449788321_431952526364478_654119586119853383_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-gru2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=aVn_n1Jg1YkQ7kNvgE65F1c&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzM5ODEwMTU2NjYyOTc0MjM4MA%3D%3D.2-ccb7-5&oh=00_AYD-K-n3U3J1rK7qB_p0e_L22o6KkC82s_tQv2-6Jc-WqA&oe=66A7CF15&_nc_sid=ee9879" alt="Post do Instagram 2" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <!-- Post 3 -->
+                    <a href="https://www.instagram.com/p/C8t8exkuxmY/" target="_blank" class="block aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/449339794_845455640398018_4295287711904791334_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=107&_nc_ohc=N1f8K_9i77kQ7kNvgE44l-D&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzM5NjU2MTEwNzkzNjA0NDU1Mw%3D%3D.2-ccb7-5&oh=00_AYB3r6e9W5d70fL1W497q0cT1C2Vf4o3R-y_jXz1T1-j5A&oe=66A7C0B0&_nc_sid=ee9879" alt="Post do Instagram 3" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                    </a>
+                </div>
+
+                <a href="https://www.instagram.com/elaconsultoria_treinamento/" target="_blank" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                    Seguir @elaconsultoria_treinamento
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="text-2xl font-bold brand-text-strong">Ela.</p>
+            <p class="mt-4">Impulsionando a jornada da mulher empreendedora.</p>
+            <div class="mt-6">
+                <p class="font-semibold brand-text-strong">Faça parte do nosso movimento:</p>
+                <p class="mt-2 text-2xl font-bold brand-accent tracking-wider">#SouEla</p>
+            </div>
+            <p class="mt-8 text-sm text-gray-500">&copy; 2025 Ela Consultoria & Treinamento. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- BOTÃO FLUTUANTE "ELEVADOR" -->
+    <a href="#evento" id="floating-event-button" class="floating-button fixed bottom-5 right-5 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-6 py-3 rounded-full font-bold shadow-2xl transition duration-300 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event mr-2" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+        Próximo Encontro
+    </a>
+
+    <script>
+        // Lógica para o menu de navegação e scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Lógica para destacar o mês atual na Jornada d'Ela
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentMonth = new Date().getMonth(); // 0 para Janeiro, 11 para Dezembro
+            const currentPhaseCard = document.getElementById('jornada-' + currentMonth);
+            
+            if (currentPhaseCard) {
+                // Remove a cor de fundo padrão para garantir que o destaque seja aplicado
+                currentPhaseCard.classList.remove('bg-white');
+                currentPhaseCard.classList.add('current-month-highlight');
+                
+                const titleElement = currentPhaseCard.querySelector('h3');
+                if (titleElement) {
+                    titleElement.classList.remove('brand-text-strong');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
