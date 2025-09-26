@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELA Consultoria & Treinamento</title>
+    <title>ELA Consultoria | A Sua Jornada Empreendedora</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #fdfaf8;
-            opacity: 0.9;
+            background-color: rgba(253, 250, 248, 0.9); /* #fdfaf8 com opacidade */
             z-index: 1;
         }
         .hero-content {
@@ -45,24 +44,6 @@
         .shadow-custom {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        .jornada-card, .service-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .current-month-highlight {
-            background-color: #8B5CF6; /* roxo */
-            color: white;
-            transform: scale(1.05);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .current-month-highlight h3 {
-            color: white;
-        }
-        .floating-button {
-            transition: transform 0.3s ease-in-out;
-        }
-        .floating-button:hover {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body class="bg-gray-50 brand-text-soft">
@@ -73,10 +54,11 @@
             <div class="flex items-center justify-between">
                 <a href="#" class="text-xl font-bold brand-text-strong">ELA Consultoria & Treinamento</a>
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#jornada" class="hover:text-brand-accent transition duration-300">Ciclos da Trilha</a>
+                    <a href="#sobre" class="hover:text-brand-accent transition duration-300">Sobre Nós</a>
                     <a href="#servicos" class="hover:text-brand-accent transition duration-300">Serviços</a>
+                    <a href="#maratona" class="hover:text-brand-accent transition duration-300">Maratona</a>
                     <a href="#premio" class="hover:text-brand-accent transition duration-300">Prêmio Ela</a>
-                    <a href="#evento" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-5 py-2 rounded-full font-semibold transition duration-300">Próximo Evento</a>
+                    <a href="#contato" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-5 py-2 rounded-full font-semibold transition duration-300">Contato</a>
                 </nav>
                 <div class="md:hidden">
                     <!-- Menu mobile pode ser adicionado aqui -->
@@ -86,287 +68,207 @@
     </header>
 
     <main>
-        <!-- 
-            SEÇÃO HERO 
-            PARA ALTERAR A IMAGEM DE FUNDO, SUBSTITUA O LINK DENTRO DE style="background-image: url('...')".
-            Use uma imagem de alta qualidade para um melhor resultado.
-        -->
+        <!-- SEÇÃO HERO -->
         <section 
             class="hero-bg pt-32 pb-20" 
-            style="background-image: url('https://i.postimg.cc/c4qj6gLx/IMG-0274.jpg');">
+            style="background-image: url('https://www.rbsdirect.com.br/imagesrc/25430343.jpg?w=1200&h=630&a=c&version=1575255600');">
             
             <div class="container mx-auto px-6 text-center hero-content">
                 <h1 class="text-4xl md:text-6xl font-extrabold brand-text-strong leading-tight">
-                    Sua jornada empreendedora<br>começa com <span class="brand-accent">Ela.</span>
+                    ELA Consultoria & Treinamento
                 </h1>
                 <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto">
-                    Transformamos ideias em negócios e negócios em legados. Acreditamos no poder da mulher empreendedora e estamos aqui para impulsionar cada passo do seu caminho.
+                    Capacitação profissional, consultoria estratégica e desenvolvimento humano para impulsionar o seu sucesso.
                 </p>
-                <a href="#evento" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg">
-                    Participe do nosso próximo encontro
+                <a href="#servicos" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                    Conheça Nossas Soluções
                 </a>
             </div>
         </section>
 
-        <!-- SEÇÃO EVENTO (O ELEVADOR) -->
-        <section id="evento" class="py-20 bg-[#8B5CF6]">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Seu Próximo Passo na Jornada</h2>
-                <p class="mt-4 text-lg max-w-2xl mx-auto text-white/90">Conecte-se, aprenda e cresça ao lado de outras mulheres que, como você, estão a construir os seus sonhos.</p>
-                
-                <div class="mt-12 bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto shadow-custom">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div class="flex flex-col items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-calendar-event brand-accent" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Data</h3>
-                            <p>30 de Outubro</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-clock brand-accent" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
-                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Horário</h3>
-                            <p>19h às 21h</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo-alt-fill brand-accent" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-                            <h3 class="mt-3 font-bold text-lg brand-text-strong">Formato</h3>
-                            <p>Online, via Zoom</p>
-                        </div>
-                    </div>
-                    <a href="#" class="mt-10 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-10 py-4 rounded-full font-bold text-lg transition duration-300 w-full md:w-auto shadow-lg">
-                        QUERO GARANTIR A MINHA VAGA
-                    </a>
-                    <p class="mt-4 text-sm text-gray-500">Vagas limitadas para garantir a qualidade da interação.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO JORNADA -->
-        <section id="jornada" class="py-20">
+        <!-- SEÇÃO SOBRE NÓS -->
+        <section id="sobre" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Ciclos da Trilha</h2>
-                    <p class="mt-4 text-lg max-w-2xl mx-auto">Um plano de crescimento para cada mês do seu ano empreendedor.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- As 12 Fases da Jornada -->
-                    <div id="jornada-0" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 1</h3>
-                        <p class="mt-3">Preparação Profissional: Empreendendo com propósito</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Nossa Essência</h2>
                     </div>
-                    <div id="jornada-1" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 2</h3>
-                        <p class="mt-3">Tecnologia: Construindo sua presença digital</p>
+                    <div class="mt-8 text-center text-lg space-y-4">
+                        <p>A ELA Consultoria & Treinamento é uma empresa privada especializada em oferecer soluções de capacitação profissional, consultoria estratégica e desenvolvimento humano para empresas e clientes individuais. Nosso trabalho combina conhecimento técnico, suporte personalizado e inovação tecnológica, ajudando pessoas e organizações a atingirem seus objetivos com eficiência e excelência.</p>
+                        <p>Além de nossos serviços corporativos e individuais, conduzimos o projeto social Maratona Empreendedora, uma iniciativa voltada para a formação e o fortalecimento de pequenas empreendedoras, reforçando nosso compromisso com a transformação social de forma responsável e estruturada.</p>
                     </div>
-                    <div id="jornada-2" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 3</h3>
-                        <p class="mt-3">Finanças: Organização e planejamento financeiro pessoal e empresarial</p>
-                    </div>
-                    <div id="jornada-3" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 4</h3>
-                        <p class="mt-3">Preparação Profissional: Comunicação eficaz no empreendedorismo</p>
-                    </div>
-                    <div id="jornada-4" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 5</h3>
-                        <p class="mt-3">Tecnologia: Ferramentas Digitais para empreendedores</p>
-                    </div>
-                    <div id="jornada-5" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 6</h3>
-                        <p class="mt-3">Finanças: Precificação e gestão de custos</p>
-                    </div>
-                    <div id="jornada-6" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 7</h3>
-                        <p class="mt-3">Preparação profissional: Inteligência Emocional para empreendedores</p>
-                    </div>
-                    <div id="jornada-7" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 8</h3>
-                        <p class="mt-3">Tecnologia: Criando um produto digital e vendendo online</p>
-                    </div>
-                    <div id="jornada-8" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 9</h3>
-                        <p class="mt-3">Finanças: Gestão de fluxo de caixa e investimento</p>
-                    </div>
-                    <div id="jornada-9" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 10</h3>
-                        <p class="mt-3">Preparação profissional: Empoderamento e liderança feminina</p>
-                    </div>
-                    <div id="jornada-10" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 11</h3>
-                        <p class="mt-3">Tecnologia: Marketing digital e estratégias de vendas</p>
-                    </div>
-                    <div id="jornada-11" class="jornada-card bg-white p-6 rounded-2xl shadow-custom text-center">
-                        <h3 class="text-xl font-bold brand-text-strong">Ciclo 12</h3>
-                        <p class="mt-3">Finanças: Planejamento de crescimento e sustentabilidade do negócio</p>
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h3 class="text-2xl font-bold brand-accent mb-4">Missão</h3>
+                            <p>Proporcionar soluções de treinamento e consultoria que promovam desenvolvimento profissional, resultados estratégicos e crescimento sustentável para empresas e indivíduos.</p>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h3 class="text-2xl font-bold brand-accent mb-4">Visão</h3>
+                            <p>Ser referência em consultoria e treinamento no Brasil, reconhecida pela qualidade, inovação e impacto positivo no mercado.</p>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h3 class="text-2xl font-bold brand-accent mb-4">Valores</h3>
+                            <p>Excelência, Ética, Inovação, Personalização e Compromisso com Resultados.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SEÇÃO SERVIÇOS -->
-        <section id="servicos" class="py-20 bg-white">
+        <section id="servicos" class="py-20">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-20">
+                <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Nossos Serviços</h2>
-                    <p class="mt-4 text-lg max-w-3xl mx-auto">Na ELA Consultoria, acreditamos que empresas crescem quando pessoas são valorizadas e a responsabilidade social é prioridade. Conheça nossas soluções:</p>
+                    <p class="mt-4 text-lg max-w-3xl mx-auto">Soluções que transformam pessoas e impulsionam negócios.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     
-                    <!-- Card: Workshops Práticos -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">🚀 Workshops Práticos</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Workshops" alt="Imagem de um workshop prático" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Workshops Práticos</h3>
                         <p class="flex-grow">Vivências interativas para transformar equipes em verdadeiros times.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Liderança Feminina e Gestão Humanizada</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Comunicação Assertiva e Inteligência Emocional</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Vendas Humanizadas e Relacionamento com o Cliente</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Inovação e Criatividade nos Negócios</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Gestão de Conflitos e Colaboração em Equipes</span></li>
-                        </ul>
                     </div>
 
-                    <!-- Card: Palestras Inspiradoras -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">🎤 Palestras Inspiradoras</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Palestras" alt="Imagem de uma palestra inspiradora" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Palestras Inspiradoras</h3>
                         <p class="flex-grow">Ideias que despertam, motivam e mobilizam.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Protagonismo Feminino no Mercado de Trabalho</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Diversidade e Inclusão como Estratégia de Negócios</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Saúde Mental e Bem-estar Corporativo</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>ESG e Sustentabilidade no Ambiente Empresarial</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Motivação, Resiliência e Produtividade</span></li>
-                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Projetos+Sociais" alt="Imagem de um projeto social" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Projetos Sociais e ESG</h3>
+                        <p class="flex-grow">Criamos e executamos projetos sociais sob medida.</p>
                     </div>
 
-                    <!-- Card: Projetos Sociais e ESG -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">🌱 Projetos Sociais e ESG</h3>
-                        <p class="flex-grow">Da construção à gestão, criamos e executamos projetos sociais sob medida.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Implantação de Programas de Responsabilidade Social</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Execução de Ações de Impacto Comunitário</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Captação de Recursos e Leis de Incentivo</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Relatórios de Impacto e Prestação de Contas</span></li>
-                        </ul>
-                    </div>
-
-                    <!-- Card: Mentorias Estratégicas -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">🤝 Mentorias Estratégicas</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Mentorias" alt="Imagem de uma mentoria estratégica" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Mentorias Estratégicas</h3>
                         <p class="flex-grow">Crescimento com acompanhamento próximo e direcionado.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Mentoria Executiva para Mulheres em Ascensão</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Mentoria de Carreira e Recolocação Profissional</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Mentoria para Empreendedoras</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Mentoria em Liderança Colaborativa</span></li>
-                        </ul>
                     </div>
 
-                     <!-- Card: Treinamentos Corporativos -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">📚 Treinamentos Corporativos</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Treinamentos" alt="Imagem de um treinamento corporativo" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Treinamentos Corporativos</h3>
                         <p class="flex-grow">Desenvolvimento sob medida para o sucesso da sua equipe.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Formação de Líderes Multiplicadores</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Técnicas Avançadas de Vendas</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Atendimento e Experiência do Cliente</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Educação Financeira para Colaboradores</span></li>
-                             <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Inclusão, Diversidade e Cultura Organizacional</span></li>
-                        </ul>
                     </div>
 
-                     <!-- Card: Soluções Digitais -->
-                    <div class="service-card bg-gray-50 p-8 rounded-2xl border border-gray-200 flex flex-col">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">💡 Soluções Digitais e Complementares</h3>
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/white?text=Soluções+Digitais" alt="Imagem de soluções digitais" class="rounded-lg mb-6">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Soluções Digitais</h3>
                         <p class="flex-grow">Conteúdo acessível e personalizado para empresas modernas.</p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>E-books e Guias Práticos</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Cursos Online e Híbridos</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Planos de Desenvolvimento Individual (PDI)</span></li>
-                            <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Pesquisas Internas e Diagnóstico Organizacional</span></li>
-                             <li class="flex items-start"><span class="brand-accent mr-3 mt-1">✓</span><span>Campanhas de Engajamento e Cultura Corporativa</span></li>
-                        </ul>
                     </div>
                 </div>
-
-                <div class="mt-20 text-center max-w-3xl mx-auto">
-                    <!-- FOTO DA ESPECIALISTA ADICIONADA -->
-                    <div class="flex justify-center mb-6">
-                         <img src="https://i.postimg.cc/LmSDcDnq/Imagem-do-Whats-App-de-2025-09-26-s-08-54-38-8172cf7d.jpg" alt="Especialista da ELA Consultoria" class="w-32 h-32 rounded-full object-cover shadow-lg">
-                    </div>
-
-                    <!-- BOTÃO ATUALIZADO -->
-                    <!-- Para alterar o e-mail de destino, mude o valor em href="mailto:..." -->
-                    <a href="mailto:contato@elaconsultoria.com.br" class="inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg mb-8">
-                        Fale com a especialista
-                    </a>
-                    <p class="text-xl font-semibold brand-text-strong">Na ELA Consultoria, unimos formação, impacto social e resultados de negócios.</p>
-                    <p class="mt-2 text-2xl font-bold brand-accent">Sua empresa pode ser protagonista da transformação.</p>
-                </div>
-
-                <!-- NOVA SEÇÃO: PRÊMIO ELA EM DESTAQUE -->
-                <div id="premio" class="mt-20 py-20 bg-violet-50 rounded-2xl">
-                    <div class="container mx-auto px-6 text-center">
-                        <div>
-                            <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Prêmio Ela em Destaque</h2>
-                            <p class="mt-2 text-2xl md:text-3xl font-semibold brand-accent">Mulheres que Inspiram</p>
-                        </div>
-                        
-                        <div class="mt-8 max-w-3xl mx-auto text-left space-y-6">
-                            <p>Na ELA Consultoria & Treinamento, acreditamos que cada mulher é uma potência em movimento — capaz de transformar sua própria vida e, ao mesmo tempo, abrir caminhos para outras.</p>
-                            <p>Foi desse propósito que nasceu o Prêmio Ela em Destaque, uma celebração anual criada para reconhecer mulheres que brilham pelo protagonismo, inovação e impacto. Aqui valorizamos aquelas que ousaram sonhar grande, conduziram seus negócios com coragem, desenvolveram ideias que inspiram e construíram, junto conosco, projetos que transformam realidades.</p>
-                            <p>Mais do que um prêmio, este é um símbolo de reconhecimento e visibilidade. É a oportunidade de mostrar ao mundo a força da sua trajetória, de elevar sua voz e de inspirar outras mulheres a acreditarem em si mesmas.</p>
-                            <p class="font-semibold brand-text-strong">Se você é uma mulher que transforma, lidera e inspira — este é o seu lugar.</p>
-                        </div>
-
-                        <hr class="my-12 border-gray-300 max-w-sm mx-auto">
-
-                        <h3 class="text-2xl font-bold brand-text-strong mb-6">Categorias da Premiação</h3>
-                        <div class="max-w-3xl mx-auto text-left">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><span class="brand-accent mr-3 mt-1 font-bold">•</span><span><strong>Inovação e Criatividade</strong> – para mulheres que trazem soluções novas e transformadoras para seus negócios ou comunidades.</span></li>
-                                <li class="flex items-start"><span class="brand-accent mr-3 mt-1 font-bold">•</span><span><strong>Empreendedorismo Inspirador</strong> – para aquelas que constroem e fortalecem negócios com propósito e impacto.</span></li>
-                                <li class="flex items-start"><span class="brand-accent mr-3 mt-1 font-bold">•</span><span><strong>Impacto Social</strong> – para quem dedica sua força à transformação de vidas e comunidades.</span></li>
-                                <li class="flex items-start"><span class="brand-accent mr-3 mt-1 font-bold">•</span><span><strong>Liderança Feminina</strong> – para mulheres que conduzem equipes, projetos ou iniciativas com coragem e visão estratégica.</span></li>
-                                <li class="flex items-start"><span class="brand-accent mr-3 mt-1 font-bold">•</span><span><strong>Destaque Parceira</strong> – para mulheres que, em colaboração com a ELA Consultoria e Treinamento, desenvolveram projetos ou ações que deixaram marca.</span></li>
-                            </ul>
-                        </div>
-                        
-                        <hr class="my-12 border-gray-300 max-w-sm mx-auto">
-
-                        <div class="max-w-3xl mx-auto">
-                            <p class="text-lg font-semibold">O Prêmio Ela em Destaque é mais do que uma premiação: é uma rede de reconhecimento, visibilidade e inspiração para todas as mulheres que acreditam no poder da sua jornada.</p>
-                            <a href="#" class="mt-8 inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg">
-                                Participe, brilhe e mostre a sua potência
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </section>
+
+        <!-- SEÇÃO MARATONA EMPREENDEDORA -->
+        <section id="maratona" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Maratona Empreendedora</h2>
+                    <p class="mt-4 text-lg max-w-3xl mx-auto">Nosso projeto social para capacitar e fortalecer mulheres empreendedoras, em parceria com FIAP, SICOOB e a Prefeitura de Salvador.</p>
+                </div>
+
+                <div class="text-center mb-16">
+                    <h3 class="text-2xl font-bold brand-text-strong mb-10">Os Ciclos do Projeto</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h4 class="text-xl font-bold brand-accent mb-3">Finanças</h4>
+                            <p>Organização e planejamento financeiro, precificação, gestão de custos, fluxo de caixa e investimentos para a sustentabilidade do negócio.</p>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h4 class="text-xl font-bold brand-accent mb-3">Tecnologia</h4>
+                            <p>Construção de presença digital, uso de ferramentas para gestão, criação de produtos digitais e estratégias de marketing e vendas online.</p>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
+                            <h4 class="text-xl font-bold brand-accent mb-3">Preparação Profissional</h4>
+                            <p>Desenvolvimento de comunicação eficaz, inteligência emocional, liderança feminina e empoderamento para o sucesso pessoal e profissional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold brand-text-strong text-center mb-8">Nossos Parceiros</h3>
+                    <div class="flex justify-center items-center gap-12 flex-wrap">
+                        <img src="https://placehold.co/200x100?text=FIAP" alt="Logo FIAP" class="h-16">
+                        <img src="https://placehold.co/200x100?text=SICOOB" alt="Logo SICOOB" class="h-16">
+                        <img src="https://placehold.co/200x100?text=Prefeitura+de+Salvador" alt="Logo Prefeitura de Salvador" class="h-16">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-gray-50 p-10 rounded-2xl">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Participe e Conecte-se</h3>
+                        <p class="mb-6">Faça sua inscrição na Maratona Empreendedora, entre para o nosso grupo exclusivo de participantes e tire suas dúvidas diretamente conosco.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold py-3 px-6 rounded-lg">Entrar no Grupo</a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg">Fale Conosco</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/250x250/ffffff/000000?text=QR+Code+Inscrição" alt="QR Code para Inscrição na Maratona Empreendedora">
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold brand-text-strong text-center mb-8">Conheça o Projeto</h3>
+                     <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-custom">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRÊMIO -->
+        <section id="premio" class="py-20 bg-[#8B5CF6]">
+            <div class="container mx-auto px-6 text-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Prêmio Ela em Destaque</h2>
+                    <p class="mt-2 text-2xl md:text-3xl font-semibold text-white/90">Mulheres que Inspiram</p>
+                </div>
+
+                <div class="mt-12 bg-gray-50 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-custom">
+                    <p class="mb-6">Uma celebração anual criada para reconhecer mulheres que brilham pelo protagonismo, inovação e impacto. É a oportunidade de mostrar ao mundo a força da sua trajetória, de elevar sua voz e de inspirar outras mulheres a acreditarem em si mesmas.</p>
+                    <a href="#" class="inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                        Saiba Mais Sobre a Premiação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <div class="flex justify-center mb-6">
+                     <img src="https://i.postimg.cc/LmSDcDnq/Imagem-do-Whats-App-de-2025-09-26-s-08-54-38-8172cf7d.jpg" alt="Especialista da ELA Consultoria" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                </div>
+                <h2 class="text-3xl font-bold brand-text-strong mb-4">Fale com a especialista</h2>
+                <p class="text-xl mb-8">Na ELA Consultoria, unimos formação, impacto social e resultados de negócios. Sua empresa pode ser protagonista da transformação.</p>
+                <a href="mailto:contato@elaconsultoria.com.br" class="inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                    Envie uma mensagem
+                </a>
+            </div>
+        </section>
+
 
     </main>
 
     <!-- RODAPÉ -->
-    <footer class="bg-white border-t border-gray-200">
+    <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-10 text-center">
-            <p class="text-xl font-bold brand-text-strong">ELA Consultoria & Treinamento</p>
-            <p class="mt-4">Impulsionando a jornada da mulher empreendedora.</p>
+            <p class="text-xl font-bold">ELA Consultoria & Treinamento</p>
+            <p class="mt-4 text-gray-400">Impulsionando a jornada da mulher empreendedora.</p>
             <div class="mt-6">
-                <p class="font-semibold brand-text-strong">Faça parte do nosso movimento:</p>
-                <p class="mt-2 text-2xl font-bold brand-accent tracking-wider">#SouEla</p>
+                <p class="font-semibold">Faça parte do nosso movimento:</p>
+                <p class="mt-2 text-2xl font-bold text-[#a78bfa] tracking-wider">#SouEla</p>
             </div>
             <p class="mt-8 text-sm text-gray-500">&copy; 2025 Ela Consultoria & Treinamento. Todos os direitos reservados.</p>
         </div>
     </footer>
     
-    <!-- BOTÃO FLUTUANTE "ELEVADOR" -->
-    <a href="#evento" id="floating-event-button" class="floating-button fixed bottom-5 right-5 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-6 py-3 rounded-full font-bold shadow-2xl transition duration-300 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event mr-2" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-        Próximo Encontro
-    </a>
-
     <script>
         // Lógica para o menu de navegação e scroll suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -377,30 +279,8 @@
                 });
             });
         });
-
-        // Lógica para destacar o mês atual na Jornada d'Ela
-        window.addEventListener('DOMContentLoaded', () => {
-            const currentMonth = new Date().getMonth(); // 0 para Janeiro, 11 para Dezembro
-            const currentPhaseCard = document.getElementById('jornada-' + currentMonth);
-            
-            if (currentPhaseCard) {
-                // Remove a cor de fundo padrão para garantir que o destaque seja aplicado
-                currentPhaseCard.classList.remove('bg-white');
-                currentPhaseCard.classList.add('current-month-highlight');
-                
-                const titleElement = currentPhaseCard.querySelector('h3');
-                if (titleElement) {
-                    titleElement.classList.remove('brand-text-strong');
-                }
-            }
-        });
     </script>
 
 </body>
 </html>
-
-
-
-
-
 
