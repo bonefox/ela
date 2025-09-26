@@ -44,19 +44,27 @@
         .shadow-custom {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        .current-cycle-highlight {
+            background-color: #8B5CF6; /* roxo */
+            color: white;
+        }
+        .current-cycle-highlight p, .current-cycle-highlight span {
+            color: white !important;
+        }
     </style>
 </head>
-<body class="bg-gray-50 brand-text-soft">
+<body id="inicio" class="bg-gray-50 brand-text-soft">
 
     <!-- CABEÇALHO -->
     <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-xl font-bold brand-text-strong">ELA Consultoria & Treinamento</a>
+                <a href="#inicio" class="text-xl font-bold brand-text-strong">ELA Consultoria & Treinamento</a>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#sobre" class="hover:text-brand-accent transition duration-300">Sobre Nós</a>
                     <a href="#servicos" class="hover:text-brand-accent transition duration-300">Serviços</a>
                     <a href="#maratona" class="hover:text-brand-accent transition duration-300">Maratona</a>
+                    <a href="#parceiros" class="hover:text-brand-accent transition duration-300">Parceiros</a>
                     <a href="#premio" class="hover:text-brand-accent transition duration-300">Prêmio Ela</a>
                     <a href="#contato" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-5 py-2 rounded-full font-semibold transition duration-300">Contato</a>
                 </nav>
@@ -120,45 +128,45 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Nossos Serviços</h2>
-                    <p class="mt-4 text-lg max-w-3xl mx-auto text-white/90">Soluções que transformam pessoas e impulsionam negócios.</p>
+                    <p class="mt-4 text-lg max-w-4xl mx-auto text-white/90">Na ELA Consultoria, acreditamos que empresas crescem quando pessoas são valorizadas e a responsabilidade social é prioridade. Conheça nossas soluções:</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Workshops" alt="Imagem de um workshop prático" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Workshops Práticos</h3>
-                        <p class="flex-grow">Vivências interativas para transformar equipes em verdadeiros times.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Workshops Práticos</h3>
+                        <button data-modal-target="#modal-workshops" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Transforme seu time em protagonistas da mudança.</button>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Palestras" alt="Imagem de uma palestra inspiradora" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Palestras Inspiradoras</h3>
-                        <p class="flex-grow">Ideias que despertam, motivam e mobilizam.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Palestras Inspiradoras</h3>
+                        <button data-modal-target="#modal-palestras" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Leve conhecimento e inspiração para dentro da sua empresa.</button>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Projetos+Sociais" alt="Imagem de um projeto social" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Projetos Sociais e ESG</h3>
-                        <p class="flex-grow">Criamos e executamos projetos sociais sob medida.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Projetos Sociais e ESG</h3>
+                        <button data-modal-target="#modal-projetos" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Mais visibilidade e impacto social para sua empresa.</button>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Mentorias" alt="Imagem de uma mentoria estratégica" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Mentorias Estratégicas</h3>
-                        <p class="flex-grow">Crescimento com acompanhamento próximo e direcionado.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Mentorias Estratégicas</h3>
+                         <button data-modal-target="#modal-mentorias" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Apoie talentos internos e forme líderes de impacto.</button>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Treinamentos" alt="Imagem de um treinamento corporativo" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Treinamentos Corporativos</h3>
-                        <p class="flex-grow">Desenvolvimento sob medida para o sucesso da sua equipe.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Treinamentos Corporativos</h3>
+                        <button data-modal-target="#modal-treinamentos" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Capacite sua equipe para entregar mais, com qualidade e propósito.</button>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col">
+                    <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
                         <img src="https://placehold.co/600x400/8B5CF6/white?text=Soluções+Digitais" alt="Imagem de soluções digitais" class="rounded-lg mb-6">
-                        <h3 class="text-2xl font-bold brand-text-strong mb-4">Soluções Digitais</h3>
-                        <p class="flex-grow">Conteúdo acessível e personalizado para empresas modernas.</p>
+                        <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Soluções Digitais</h3>
+                        <button data-modal-target="#modal-digitais" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Ferramentas para potencializar seu negócio.</button>
                     </div>
                 </div>
             </div>
@@ -167,30 +175,56 @@
         <!-- SEÇÃO MARATONA EMPREENDEDORA -->
         <section id="maratona" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
+                <div class="text-center mb-12 max-w-4xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold brand-text-strong">Maratona Empreendedora</h2>
-                    <p class="mt-4 text-lg max-w-3xl mx-auto">Nosso projeto social para capacitar e fortalecer mulheres empreendedoras, em parceria com FIAP, SICOOB e a Prefeitura de Salvador.</p>
-                </div>
-
-                <div class="text-center mb-16">
-                    <h3 class="text-2xl font-bold brand-text-strong mb-10">Os Ciclos do Projeto</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
-                            <h4 class="text-xl font-bold brand-accent mb-3">Finanças</h4>
-                            <p>Organização e planejamento financeiro, precificação, gestão de custos, fluxo de caixa e investimentos para a sustentabilidade do negócio.</p>
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
-                            <h4 class="text-xl font-bold brand-accent mb-3">Tecnologia</h4>
-                            <p>Construção de presença digital, uso de ferramentas para gestão, criação de produtos digitais e estratégias de marketing e vendas online.</p>
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-2xl shadow-custom">
-                            <h4 class="text-xl font-bold brand-accent mb-3">Preparação Profissional</h4>
-                            <p>Desenvolvimento de comunicação eficaz, inteligência emocional, liderança feminina e empoderamento para o sucesso pessoal e profissional.</p>
-                        </div>
+                    <p class="mt-2 text-xl font-normal text-gray-600">Transforme seu negócio e sua vida</p>
+                    <div class="mt-8 text-lg space-y-4 text-left md:text-center">
+                        <p>Você é uma pequena empreendedora de Salvador e quer levar seu negócio para o próximo nível? A Maratona Empreendedora chegou para transformar seu potencial em resultados concretos. Nosso programa garante que você desenvolva habilidades essenciais para crescer de forma sustentável através de três pilares estratégicos:</p>
                     </div>
                 </div>
 
-                <div class="mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
+                    <div class="bg-violet-50 p-8 rounded-2xl shadow-custom text-left">
+                        <h4 class="text-xl font-bold brand-accent mb-3">Finanças</h4>
+                        <p>Organização e planejamento financeiro, precificação, gestão de custos, fluxo de caixa e investimentos para a sustentabilidade do negócio.</p>
+                    </div>
+                    <div class="bg-violet-50 p-8 rounded-2xl shadow-custom text-left">
+                        <h4 class="text-xl font-bold brand-accent mb-3">Tecnologia</h4>
+                        <p>Construção de presença digital, uso de ferramentas para gestão, criação de produtos digitais e estratégias de marketing e vendas online.</p>
+                    </div>
+                    <div class="bg-violet-50 p-8 rounded-2xl shadow-custom text-left">
+                        <h4 class="text-xl font-bold brand-accent mb-3">Preparação Profissional</h4>
+                        <p>Desenvolvimento de comunicação eficaz, inteligência emocional, liderança feminina e empoderamento para o sucesso pessoal e profissional.</p>
+                    </div>
+                </div>
+
+                 <div class="text-center mb-16 max-w-4xl mx-auto">
+                    <div class="text-lg space-y-4 text-left md:text-center">
+                        <p>Em parceria com a FIAP, SICOOB e Prefeitura de Salvador, já estamos no quinto ciclo, capacitando mulheres a expandirem seus negócios, dominarem ferramentas digitais e planejarem suas finanças com segurança.</p>
+                        <p class="font-semibold">Não perca a oportunidade de fazer parte dessa jornada que já transforma vidas e negócios. Venha para a Maratona Empreendedora e leve seu empreendimento além!</p>
+                    </div>
+                </div>
+
+                <div class="text-center mb-16">
+                    <h3 class="text-2xl md:text-3xl font-bold brand-text-strong mb-10">Os Ciclos da Trilha</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-left">
+                        <!-- Ciclos Detalhados -->
+                        <div id="ciclo-1" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 1:</span> Empreendendo com propósito</p></div>
+                        <div id="ciclo-2" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 2:</span> Construindo sua presença digital</p></div>
+                        <div id="ciclo-3" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 3:</span> Organização e planejamento financeiro</p></div>
+                        <div id="ciclo-4" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 4:</span> Comunicação eficaz no empreendedorismo</p></div>
+                        <div id="ciclo-5" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 5:</span> Ferramentas Digitais para empreendedores</p></div>
+                        <div id="ciclo-6" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 6:</span> Precificação e gestão de custos</p></div>
+                        <div id="ciclo-7" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 7:</span> Inteligência Emocional para empreendedores</p></div>
+                        <div id="ciclo-8" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 8:</span> Criando um produto digital e vendendo online</p></div>
+                        <div id="ciclo-9" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 9:</span> Gestão de fluxo de caixa e investimento</p></div>
+                        <div id="ciclo-10" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 10:</span> Empoderamento e liderança feminina</p></div>
+                        <div id="ciclo-11" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 11:</span> Marketing digital e estratégias de vendas</p></div>
+                        <div id="ciclo-12" class="bg-gray-50 p-6 rounded-2xl shadow-custom transition-all duration-300"><p><span class="font-bold brand-accent block">Ciclo 12:</span> Planejamento de crescimento e sustentabilidade</p></div>
+                    </div>
+                </div>
+
+                <div id="parceiros" class="mb-16">
                     <h3 class="text-2xl font-bold brand-text-strong text-center mb-8">Nossos Parceiros</h3>
                     <div class="flex justify-center items-center gap-12 flex-wrap">
                         <img src="https://placehold.co/200x100?text=FIAP" alt="Logo FIAP" class="h-16">
@@ -227,14 +261,45 @@
             <div class="container mx-auto px-6 text-center">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Prêmio Ela em Destaque</h2>
-                    <p class="mt-2 text-2xl md:text-3xl font-semibold text-white/90">Mulheres que Inspiram</p>
+                    <p class="mt-2 text-xl md:text-2xl font-semibold text-white/90">Realização: ELA Consultoria & Treinamento</p>
                 </div>
 
-                <div class="mt-12 bg-gray-50 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-custom">
-                    <p class="mb-6">Uma celebração anual criada para reconhecer mulheres que brilham pelo protagonismo, inovação e impacto. É a oportunidade de mostrar ao mundo a força da sua trajetória, de elevar sua voz e de inspirar outras mulheres a acreditarem em si mesmas.</p>
-                    <a href="#" class="inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg">
-                        Saiba Mais Sobre a Premiação
-                    </a>
+                <div class="mt-12 bg-gray-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto shadow-custom text-left">
+                    <p class="mb-6">Na ELA Consultoria & Treinamento, acreditamos que cada mulher é uma potência em movimento — capaz de transformar sua própria vida e, ao mesmo tempo, abrir caminhos para outras.</p>
+                    <p class="mb-6">Foi desse propósito que nasceu o Prêmio Ela em Destaque, uma celebração anual criada para reconhecer mulheres que brilham pelo protagonismo, inovação e impacto. Aqui valorizamos aquelas que ousaram sonhar grande, conduziram seus negócios com coragem, desenvolveram ideias que inspiram e construíram, junto conosco, projetos que transformam realidades.</p>
+                    <p class="mb-8">Mais do que um prêmio, este é um símbolo de reconhecimento e visibilidade. É a oportunidade de mostrar ao mundo a força da sua trajetória, de elevar sua voz e de inspirar outras mulheres a acreditarem em si mesmas.</p>
+                    
+                    <h3 class="text-2xl font-bold brand-text-strong mb-8 text-center">Categorias da Premiação</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-custom">
+                            <h4 class="font-bold brand-accent block text-lg mb-2">Inovação e Criatividade</h4>
+                            <p class="text-sm">para mulheres que trazem soluções novas e transformadoras para seus negócios ou comunidades.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-custom">
+                            <h4 class="font-bold brand-accent block text-lg mb-2">Empreendedorismo Inspirador</h4>
+                            <p class="text-sm">para aquelas que constroem e fortalecem negócios com propósito e impacto.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-custom">
+                            <h4 class="font-bold brand-accent block text-lg mb-2">Impacto Social</h4>
+                            <p class="text-sm">para quem dedica sua força à transformação de vidas e comunidades.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-custom">
+                            <h4 class="font-bold brand-accent block text-lg mb-2">Liderança Feminina</h4>
+                            <p class="text-sm">para mulheres que conduzem equipes, projetos ou iniciativas com coragem e visão estratégica.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-custom md:col-span-2">
+                            <h4 class="font-bold brand-accent block text-lg mb-2">Destaque Parceira</h4>
+                            <p class="text-sm">para mulheres que, em colaboração com a ELA Consultoria e Treinamento, desenvolveram projetos ou ações que deixaram marca.</p>
+                        </div>
+                    </div>
+
+                    <p class="mb-8 font-semibold text-center">O Prêmio Ela em Destaque é mais do que uma premiação: é uma rede de reconhecimento, visibilidade e inspiração para todas as mulheres que acreditam no poder da sua jornada.</p>
+
+                    <div class="text-center">
+                        <a href="#" class="inline-block bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg">
+                            Participe e mostre sua potência
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -252,9 +317,98 @@
                 </a>
             </div>
         </section>
-
-
     </main>
+
+    <!-- MODALS PARA SERVIÇOS -->
+    <div id="modal-workshops" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-workshops" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Workshops Práticos</h3>
+            <p class="mb-4">Vivências interativas para transformar equipes em verdadeiros times.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Liderança Feminina e Gestão Humanizada</li>
+                <li>Comunicação Assertiva e Inteligência Emocional</li>
+                <li>Vendas Humanizadas e Relacionamento com o Cliente</li>
+                <li>Inovação e Criatividade nos Negócios</li>
+                <li>Gestão de Conflitos e Colaboração em Equipes</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-palestras" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-palestras" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Palestras Inspiradoras</h3>
+            <p class="mb-4">Ideias que despertam, motivam e mobilizam.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Protagonismo Feminino no Mercado de Trabalho</li>
+                <li>Diversidade e Inclusão como Estratégia de Negócios</li>
+                <li>Saúde Mental e Bem-estar Corporativo</li>
+                <li>Empreendedorismo Feminino e Impacto Social</li>
+                <li>ESG e Sustentabilidade no Ambiente Empresarial</li>
+                <li>Atendimento Humanizado e Experiência do Cliente</li>
+                <li>Motivação, Resiliência e Produtividade</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-projetos" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-projetos" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Projetos Sociais e ESG</h3>
+            <p class="mb-4">Da construção à gestão, criamos e executamos projetos sociais sob medida.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Implantação de Programas de Responsabilidade Social</li>
+                <li>Execução de Ações de Impacto Comunitário</li>
+                <li>Captação de Recursos e Leis de Incentivo</li>
+                <li>Relatórios de Impacto e Prestação de Contas</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-mentorias" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-mentorias" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Mentorias Estratégicas</h3>
+            <p class="mb-4">Crescimento com acompanhamento próximo e direcionado.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Mentoria Executiva para Mulheres em Ascensão</li>
+                <li>Mentoria de Carreira e Recolocação Profissional</li>
+                <li>Mentoria para Empreendedoras</li>
+                <li>Mentoria em Liderança Colaborativa</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-treinamentos" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-treinamentos" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Treinamentos Corporativos</h3>
+            <p class="mb-4">Desenvolvimento sob medida para o sucesso da sua equipe.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Formação de Líderes Multiplicadores</li>
+                <li>Gestão de Equipes e Engajamento</li>
+                <li>Técnicas Avançadas de Vendas</li>
+                <li>Atendimento e Experiência do Cliente</li>
+                <li>Gestão do Tempo e Produtividade Inteligente</li>
+                <li>Educação Financeira para Colaboradores</li>
+                <li>Oratória e Comunicação em Público</li>
+                <li>Inclusão, Diversidade e Cultura Organizacional</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-digitais" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-2xl w-full relative text-left">
+            <button data-modal-close="#modal-digitais" class="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold brand-text-strong mb-4">Soluções Digitais</h3>
+            <p class="mb-4">Conteúdo acessível e personalizado para empresas modernas.</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>E-books e Guias Práticos</li>
+                <li>Cursos Online e Híbridos</li>
+                <li>Oficinas Criativas e Dinâmicas de Integração</li>
+                <li>Planos de Desenvolvimento Individual (PDI)</li>
+                <li>Pesquisas Internas e Diagnóstico Organizacional</li>
+                <li>Campanhas de Engajamento e Cultura Corporativa</li>
+            </ul>
+        </div>
+    </div>
+
 
     <!-- RODAPÉ -->
     <footer class="bg-gray-800 text-white">
@@ -279,6 +433,70 @@
                 });
             });
         });
+
+        // Lógica para destacar o ciclo atual da Maratona
+        window.addEventListener('DOMContentLoaded', () => {
+            // Define a data de referência: Setembro de 2025 é o Ciclo 5
+            const referenceDate = new Date(2025, 8); // Mês 8 = Setembro (0-indexed)
+            const referenceCycle = 5;
+
+            const currentDate = new Date();
+            
+            // Calcula a diferença de meses entre a data atual e a data de referência
+            const monthDifference = (currentDate.getFullYear() - referenceDate.getFullYear()) * 12 + (currentDate.getMonth() - referenceDate.getMonth());
+            
+            // Calcula o ciclo atual
+            const currentCycle = referenceCycle + monthDifference;
+
+            // Seleciona o elemento do ciclo atual e aplica o destaque
+            if (currentCycle >= 1 && currentCycle <= 12) {
+                const cycleElement = document.getElementById('ciclo-' + currentCycle);
+                if (cycleElement) {
+                    cycleElement.classList.remove('bg-gray-50'); // Remove o fundo cinza
+                    cycleElement.classList.add('current-cycle-highlight');
+                }
+            }
+        });
+
+        // Lógica para Modals
+        const openModalButtons = document.querySelectorAll('[data-modal-target]');
+        const closeModalButtons = document.querySelectorAll('[data-modal-close]');
+        const modals = document.querySelectorAll('.modal');
+
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector(button.dataset.modalTarget);
+                openModal(modal);
+            });
+        });
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                closeModal(modal);
+            });
+        });
+
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+
+        function openModal(modal) {
+            if (modal == null) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex'); // usa flex para centralizar
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
     </script>
 
 </body>
