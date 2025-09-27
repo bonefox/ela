@@ -62,9 +62,11 @@
 
     <!-- CABEÇALHO -->
     <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
                 <a href="#inicio" class="text-xl font-bold brand-text-strong">ELA Consultoria & Treinamento</a>
+                
+                <!-- Menu Desktop -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#sobre" class="hover:text-brand-accent transition duration-300">Sobre Nós</a>
                     <a href="#servicos" class="hover:text-brand-accent transition duration-300">Serviços</a>
@@ -73,9 +75,23 @@
                     <a href="#premio" class="hover:text-brand-accent transition duration-300">Prêmio Ela</a>
                     <a href="#contato" class="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-5 py-2 rounded-full font-semibold transition duration-300">Contato</a>
                 </nav>
+
+                <!-- Botão do Menu Mobile -->
                 <div class="md:hidden">
-                    <!-- Menu mobile pode ser adicionado aqui -->
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                        <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
                 </div>
+            </div>
+             <!-- Menu Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg -mx-6">
+                <a href="#sobre" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Sobre Nós</a>
+                <a href="#servicos" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Serviços</a>
+                <a href="#maratona" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Maratona</a>
+                <a href="#parceiros" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Parceiros</a>
+                <a href="#premio" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Prêmio Ela</a>
+                <a href="#contato" class="block py-3 px-6 text-sm hover:bg-gray-100 transition-colors">Contato</a>
             </div>
         </div>
     </header>
@@ -139,37 +155,37 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/9Qx7bZ7v/IMG-0129.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/9Qx7bZ7v/IMG-0129.jpg" alt="Mulheres participando de um workshop prático" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Workshops Práticos</h3>
                         <button data-modal-target="#modal-workshops" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Transforme seu time em protagonistas da mudança.</button>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/85RxQpN7/IMG-0041.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/85RxQpN7/IMG-0041.jpg" alt="Palestrante falando para uma audiência" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Palestras Inspiradoras</h3>
                         <button data-modal-target="#modal-palestras" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Leve conhecimento e inspiração para dentro da sua empresa.</button>
                     </div>
                     
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/yNtS4Knb/IMG-0003.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/yNtS4Knb/IMG-0003.jpg" alt="Pessoas trabalhando em um projeto social" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Projetos Sociais e ESG</h3>
                         <button data-modal-target="#modal-projetos" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Mais visibilidade e impacto social para sua empresa.</button>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/8CJjb3Dr/IMG-0358.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/8CJjb3Dr/IMG-0358.jpg" alt="Mulher em uma sessão de mentoria" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Mentorias Estratégicas</h3>
                          <button data-modal-target="#modal-mentorias" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Apoie talentos internos e forme grandes líderes.</button>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/ZqBCLgZL/IMG-0273.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/ZqBCLgZL/IMG-0273.jpg" alt="Equipe em treinamento corporativo" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Treinamentos Corporativos</h3>
                         <button data-modal-target="#modal-treinamentos" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Capacite sua equipe para entregar mais, com qualidade e propósito.</button>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-custom flex flex-col text-left">
-                        <img src="https://i.postimg.cc/Vsj0T3t7/IMG-0119.jpg" alt="" class="rounded-lg mb-6 service-card-img">
+                        <img src="https://i.postimg.cc/Vsj0T3t7/IMG-0119.jpg" alt="Pessoa utilizando soluções digitais em um tablet" class="rounded-lg mb-6 service-card-img">
                         <h3 class="text-2xl font-bold brand-text-strong mb-4 flex-grow">Soluções Digitais</h3>
                         <button data-modal-target="#modal-digitais" class="w-full bg-violet-100 text-brand-accent font-semibold p-3 rounded-lg hover:bg-violet-200 transition-colors">Ferramentas para potencializar seu negócio.</button>
                     </div>
@@ -586,7 +602,29 @@
             modal.classList.remove('flex');
         }
 
+        // Lógica para Menu Mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Fecha o menu mobile ao clicar em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
     </script>
 
 </body>
 </html>
+
